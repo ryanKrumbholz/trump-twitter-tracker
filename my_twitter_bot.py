@@ -2,10 +2,10 @@ import tweepy
 import datetime
 import time
 
-CONSUMER_KEY = 'HuI7nckNAg1zyMVRE8iaEY7ar' #twitter developer consumver ID
-CONSUMER_SECRET = 'phssMIrecxk2EjPKkOP26hy5GnF5YmXt4EBbnwxTHD0e7kX6pG' #twitter developer consumer secret
-ACCESS_KEY = '4757672180-lKEan14xMFsfClxNXw9TWwF83CDuaz9IS78HGGA' #twitter developer access key
-ACCESS_SECRET = 's6cEWSGGmkTxAGDA6l1R55T8ZstMikMNASOegMyl5hf7D' #twitter developer secret
+CONSUMER_KEY = 'your key' #twitter developer consumver ID
+CONSUMER_SECRET = 'your key' #twitter developer consumer secret
+ACCESS_KEY = 'your key' #twitter developer access key
+ACCESS_SECRET = 'your key' #twitter developer secret
 
 auth =  tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET) #creating the authentication
 auth.set_access_token(ACCESS_KEY,ACCESS_SECRET)
