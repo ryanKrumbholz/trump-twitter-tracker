@@ -9,7 +9,7 @@ ACCESS_SECRET = 'your key' #twitter developer secret
 
 auth =  tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET) #creating the authentication
 auth.set_access_token(ACCESS_KEY,ACCESS_SECRET)
-api = tweepy.API(auth)
+api = tweepy.API(auth, wait_on_rate_limit=True)
 
 def exit():
     print("Exiting program")
