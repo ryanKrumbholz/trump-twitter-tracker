@@ -62,7 +62,10 @@ def tweet_oncommand():
     current_time = time.ctime(time.time())
     day_of_month = time.gmtime()[2]
     last_seen_id = read_last_id()
-    mentions = api.mentions_timeline(last_seen_id) #only mentions that haven't been seen yet
+    if last_seen_id != 0:
+        mentions = api.mentions_timeline(last_seen_id) #only mentions that haven't been seen yet
+    else:
+        mentions = api.mentions_timeline() #only mentions that haven't been seen yet
     for mention in reversed(mentions): #iterating through all unseen mentions
         user = mention.user.screen_name #twitter username
         last_seen_id = mention.id #updating last_seen_id
